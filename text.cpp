@@ -3,10 +3,28 @@
 
 int main()
 {
-        sf::Quads;
     
     sf::RenderWindow window{{800, 600}, "Window"};
-    
+    tgui::Gui gui{window};
+    tgui::EditBox::Ptr Box0 = tgui::EditBox::create();
+            Box0 -> setPosition(100,150);
+            gui.add(Box0);
+    tgui::EditBox::Ptr Box1 = tgui::EditBox::create();
+            Box1 -> setPosition(100,175);
+            gui.add(Box1);
+    tgui::EditBox::Ptr Box2 = tgui::EditBox::create();
+            Box2 -> setPosition(100,200);
+            gui.add(Box2);
+    tgui::EditBox::Ptr Box3 = tgui::EditBox::create();
+            Box3 -> setPosition(100,225);
+            gui.add(Box3);
+    tgui::EditBox::Ptr Box4 = tgui::EditBox::create();
+            Box4 -> setPosition(100,250);
+            gui.add(Box4);
+    tgui::EditBox::Ptr Box5 = tgui::EditBox::create();
+            Box5 -> setPosition(100,275);
+            gui.add(Box5);
+            
         sf::Font font;
         font.loadFromFile("Black Clover Font.ttf");
                 sf::Text text;
@@ -32,11 +50,14 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
                 
+                gui.handleEvent(event);
+                
                 if (event.type == sf::Event::KeyPressed)
                 {
                          if (event.key.code == sf::Keyboard::Y)
                         {           
                                 text.setString("Then lets begin the game");
+                                //Box0.setText("hi");
                         }
    
                          if (event.key.code == sf::Keyboard::N)
@@ -49,6 +70,7 @@ int main()
 
         window.clear();
         window.draw(text); // Draw all widgets
+        gui.draw();
         window.display();
     }
 }
