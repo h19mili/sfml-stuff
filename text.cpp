@@ -63,7 +63,13 @@ int main()
                          if (event.key.code == sf::Keyboard::N)
                         { 
                                 text.setString("To bad for you the game will still start");
+                        }       
+                        
+                         if (event.key.code == sf::Keyboard::Q)        
+                        {        
+                                      
                         }
+                        
                 }               
            
         }
