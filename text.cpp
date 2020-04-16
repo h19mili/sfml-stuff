@@ -1,8 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include <TGUI/TGUI.hpp>
+#include <stdio.h>
+#include <time.h>
 
 int main()
 {
+
+    int istats;
+    srand (time(NULL));
+    istats = rand() % 18+1;
     
     sf::RenderWindow window{{800, 600}, "Window"};
     tgui::Gui gui{window};
@@ -57,7 +63,7 @@ int main()
                          if (event.key.code == sf::Keyboard::Y)
                         {           
                                 text.setString("Then lets begin the game");
-                                //Box0.setText("hi");
+                                Box0 -> istats;
                         }
    
                          if (event.key.code == sf::Keyboard::N)
