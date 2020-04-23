@@ -6,7 +6,7 @@
 int main()
 {
 
-    std::string==istats;
+    std::string(istats);
     srand (time(NULL));
     istats = std::to_string(rand() % 18+1);
     
@@ -63,17 +63,16 @@ int main()
                          if (event.key.code == sf::Keyboard::Y)
                         {           
                                 text.setString(istats);
-                                Box0 -> setText(istats);
                         }
    
                          if (event.key.code == sf::Keyboard::N)
                         { 
                                 text.setString("To bad for you the game will still start");
                         }       
-                        
+                                
                          if (event.key.code == sf::Keyboard::Q)        
                         {        
-                                      
+                                Box0 -> setText(istats);   
                         }
                         
                 }               
