@@ -6,9 +6,9 @@
 int main()
 {
 
-    int istats;
+    std::string==istats;
     srand (time(NULL));
-    istats = rand() % 18+1;
+    istats = std::to_string(rand() % 18+1);
     
     sf::RenderWindow window{{800, 600}, "Window"};
     tgui::Gui gui{window};
@@ -62,8 +62,8 @@ int main()
                 {
                          if (event.key.code == sf::Keyboard::Y)
                         {           
-                                text.setString("Then lets begin the game");
-                                Box0 -> istats;
+                                text.setString(istats);
+                                Box0 -> setText(istats);
                         }
    
                          if (event.key.code == sf::Keyboard::N)
