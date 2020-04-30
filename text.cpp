@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include <time.h>
 
+
 int main()
 {
-
+        int i=0;
     std::string(istats);
     srand (time(NULL));
     istats = std::to_string(rand() % 18+1);
@@ -62,7 +63,7 @@ int main()
                 {
                          if (event.key.code == sf::Keyboard::Y)
                         {           
-                                text.setString(istats);
+                                text.setString("Now the game will start\n");
                         }
    
                          if (event.key.code == sf::Keyboard::N)
@@ -72,7 +73,12 @@ int main()
                                 
                          if (event.key.code == sf::Keyboard::Q)        
                         {        
-                                Box0 -> setText(istats);   
+                                while(i<=5){
+                                        Box0 -> setText(istats);
+                                        
+                                        
+                                        
+                                        }
                         }
                         
                 }               
