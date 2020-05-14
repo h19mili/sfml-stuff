@@ -74,7 +74,7 @@ int main()
                          if (event.key.code == sf::Keyboard::Q)        
                         {        
                                 int i=0;
-                                while(i<=5){
+                                //while(i<=5){
                                                     srand (time(NULL));
                                 istats = std::to_string(rand() % 18+1);
                                         if (i=1) Box0 -> setText(istats);
@@ -83,8 +83,9 @@ int main()
                                         if (i=4) Box3 -> setText(istats);
                                         if (i=5) Box4 -> setText(istats);
                                         if (i=6) Box5 -> setText(istats);
-                                        i++;
-                                        }
+                                        //i++;
+                                        
+                                        //}
                         }
                         
                 }               
